@@ -15,7 +15,7 @@ from ad_namer.drive import (
 from ad_namer.naming import build_ad_name
 from ad_namer.sheet_ops import get_naming_worksheet
 
-st.set_page_config(page_title="Asset Link Sync — Mammaly Meta Ads", page_icon="🔗", layout="wide")
+st.set_page_config(page_title="Asset Link Sync — Meta Ads Uploader", page_icon="🔗", layout="wide")
 st.title("🔗 Asset Link Sync")
 st.caption(
     "Findet Asset-Dateien (UGC, Static, Video, …) in Drive-Ordnern anhand der Meta-Ad-ID "

@@ -23,7 +23,7 @@ from ad_namer.sheet_ops import (
     read_row_by_id, update_row_fields,
 )
 
-st.set_page_config(page_title="Ad Naming — Mammaly Meta Ads", page_icon="📁", layout="wide")
+st.set_page_config(page_title="Ad Naming — Meta Ads Uploader", page_icon="📁", layout="wide")
 st.title("📁 Ad Naming")
 st.caption("Drive-Ordner analysieren → Vorschläge prüfen → Dateien umbenennen + Sheet befüllen")
 

@@ -78,7 +78,7 @@ def _attr_display(adset_id: str) -> str:
         return "✅ 7d-click"
     return f"⚠️ {s['label'] or 'kein 7d-click'}"
 
-st.set_page_config(page_title="Upload — Mammaly Meta Ads", page_icon="🚀", layout="wide")
+st.set_page_config(page_title="Upload — Meta Ads Uploader", page_icon="🚀", layout="wide")
 st.title("🚀 Upload")
 st.caption("Ads aus dem Sheet zu Meta hochladen")
 
@@ -170,17 +170,18 @@ if ready_rows:
         # Performance der ABO-Testing-Kampagne (meiste Käufe je Produkt-Ad-Set,
         # letzte 7 Tage) — Basis für den Referenz-Vorschlag. Fehlschlag ist unkritisch:
         # suggest_references fällt dann auf "letztes pro Produkt / LP" zurück.
-        try:
-            from meta.reference_fetcher import fetch_adset_purchases
-            purchases_by_adset = _cached_read(
-                "abo_testing_purchases",
-                lambda: fetch_adset_purchases(
-                    config.ABO_TESTING_CAMPAIGN_ID, date_preset="last_7d"
-                ),
-            )
-        except Exception as e:
-            logging.warning("Testing-Performance nicht ladbar: %s", e)
-            purchases_by_adset = {}
+        purchases_by_adset = {}
+        if config.ABO_TESTING_CAMPAIGN_ID:
+            try:
+                from meta.reference_fetcher import fetch_adset_purchases
+                purchases_by_adset = _cached_read(
+                    "abo_testing_purchases",
+                    lambda: fetch_adset_purchases(
+                        config.ABO_TESTING_CAMPAIGN_ID, date_preset="last_7d"
+                    ),
+                )
+            except Exception as e:
+                logging.warning("Testing-Performance nicht ladbar: %s", e)
         suggestions = batch_prepare.suggest_references(
             sheet, ad_set_names,
             lp_url_by_name=lp_url_by_name, lp_by_name=lp_by_name,
@@ -536,13 +537,13 @@ with st.expander("🔧 IDs überschreiben (optional)", expanded=False):
     with col_a:
         override_campaign_id = st.text_input(
             "Source Campaign ID",
-            placeholder="z.B. 120240969369520641",
+            placeholder="Kampagnen-ID, z.B. 1200000000000000000",
             help="Überschreibt die source_campaign_id aus dem Sheet für alle neuen Ad Sets.",
         ).strip() or None
     with col_b:
         override_adset_id = st.text_input(
             "Source Reference Ad Set ID",
-            placeholder="z.B. 120243523055610641",
+            placeholder="Ad-Set-ID, z.B. 1200000000000000000",
             help="Überschreibt die source_adset_id aus dem Sheet (Referenz für Targeting, Bid-Strategie etc.).",
         ).strip() or None
 

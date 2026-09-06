@@ -34,11 +34,11 @@ def main() -> None:
     )
     parser.add_argument(
         "--source-campaign-id",
-        help="Überschreibt source_campaign_id für alle neuen Ad Sets (z.B. 120240969369520641).",
+        help="Überschreibt source_campaign_id für alle neuen Ad Sets (z.B. 1200000000000000000).",
     )
     parser.add_argument(
         "--source-adset-id",
-        help="Überschreibt source_adset_id für alle neuen Ad Sets (z.B. 120243523055610641).",
+        help="Überschreibt source_adset_id für alle neuen Ad Sets (z.B. 1200000000000000000).",
     )
     parser.add_argument(
         "--log-level",

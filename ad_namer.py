@@ -440,7 +440,7 @@ def cmd_fix_links() -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Ad Namer — Mammaly naming convention workflow")
+    parser = argparse.ArgumentParser(description="Ad Namer — naming convention workflow")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
     a = sub.add_parser("analyze", help="Schritt 1: Dateien analysieren und Vorschläge erstellen")

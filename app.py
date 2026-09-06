@@ -2,7 +2,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Mammaly Meta Ads",
+    page_title="Meta Ads Uploader",
     page_icon="🐾",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -10,7 +10,7 @@ st.set_page_config(
 
 from components.auth import status_indicators
 
-st.title("🐾 Mammaly Meta Ads Uploader")
+st.title("🚀 Meta Ads Uploader")
 st.markdown("Wähle eine Seite aus dem Menü links.")
 
 st.divider()

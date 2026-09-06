@@ -13,7 +13,7 @@ from ad_namer.drive import upload_file_to_folder, make_drive_link
 from frameio import FrameioShareError, list_share_assets, parse_share_url
 from frameio.client import resolve_download_url, download_asset
 
-st.set_page_config(page_title="Frame.io Import — Mammaly Meta Ads", page_icon="🎬", layout="wide")
+st.set_page_config(page_title="Frame.io Import — Meta Ads Uploader", page_icon="🎬", layout="wide")
 st.title("🎬 Frame.io Import")
 st.caption(
     "Überträgt Creatives aus einem oder mehreren Frame.io-Share-Links serverseitig in "

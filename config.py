@@ -42,16 +42,14 @@ LOG_TAB = "log"
 
 # ABO-Testing-Kampagne — Basis für den "best-performenden Referenz je Produkt"-Vorschlag
 # im Upload-Assistant (meiste Käufe pro Produkt-Ad-Set im gewählten Zeitfenster).
-ABO_TESTING_CAMPAIGN_ID = os.environ.get(
-    "ABO_TESTING_CAMPAIGN_ID", "120240969369520641"
-).strip()
+ABO_TESTING_CAMPAIGN_ID = os.environ.get("ABO_TESTING_CAMPAIGN_ID", "").strip()  # leer = Vorschlag deaktiviert
 
 # Sekunden Pause zwischen Meta API-Calls (Rate Limit Schutz)
 API_CALL_DELAY = 0.5
 
 # Ad Namer
 ADS_DRIVE_FOLDER_ID = _require("ADS_DRIVE_FOLDER_ID")  # UGC-Ablage (Default-Ziel)
-NAMING_SHEET_GID = int(os.environ.get("NAMING_SHEET_GID", "279155632"))
+NAMING_SHEET_GID = int(os.environ.get("NAMING_SHEET_GID", "0"))
 
 # Static-Ablage — Ad Naming routet STA-Dateien hierher, alles andere nach
 # ADS_DRIVE_FOLDER_ID (UGC). Leer → alles nach UGC (altes Verhalten).

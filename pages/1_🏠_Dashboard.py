@@ -4,7 +4,7 @@ load_dotenv()
 import streamlit as st
 from components.auth import status_indicators, require_connections
 
-st.set_page_config(page_title="Dashboard — Mammaly Meta Ads", page_icon="🏠", layout="wide")
+st.set_page_config(page_title="Dashboard — Meta Ads Uploader", page_icon="🏠", layout="wide")
 st.title("🏠 Dashboard")
 
 st.subheader("Verbindungsstatus")

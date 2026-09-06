@@ -7,7 +7,7 @@ import gspread
 
 from components.auth import require_connections
 
-st.set_page_config(page_title="History — Mammaly Meta Ads", page_icon="📊", layout="wide")
+st.set_page_config(page_title="History — Meta Ads Uploader", page_icon="📊", layout="wide")
 st.title("📊 Upload-History")
 
 _, sheet = require_connections()
