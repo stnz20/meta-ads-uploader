@@ -1,0 +1,29 @@
+.env
+*.pyc
+__pycache__/
+.DS_Store
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+credentials.json
+token.json
+cache/
+proposals.json
+.streamlit/secrets.toml
+*.log
+
+# Migrations-Reports (lokal, enthalten Ad-Inhalte)
+nature_protect_migration_*.json
+
+# Lokale Arbeitsdateien
+.claude/
+.codex/
+upload
+upload-*.log
+dryrun-*.log
+fix_naming_*.json
+*.eml
+*.pdf
+*.xlsx

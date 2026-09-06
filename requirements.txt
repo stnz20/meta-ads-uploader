@@ -1,0 +1,17 @@
+facebook-business==25.0.1
+google-api-python-client==2.195.0
+gspread==6.2.1
+google-auth==2.50.0
+google-auth-httplib2==0.3.1
+google-auth-oauthlib==1.2.2
+python-dotenv==1.2.2
+requests==2.33.1
+av==17.0.1
+Pillow==12.2.0
+streamlit==1.57.0
+# Transitive Deps von Streamlit explizit gepinnt — st.data_editor serialisiert
+# über pandas/pyarrow (native Libs); ungepinnt zog der Cloud-Container neuere
+# Versionen als lokal getestet → Segfault beim Editieren der Auswahl-Tabelle.
+pandas==3.0.3
+numpy==2.4.5
+pyarrow==24.0.0
